@@ -1,0 +1,29 @@
+﻿<Window x:Class="Play.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Play"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Grid>
+        <Image Source="/Без названия.png" />
+        <Canvas Background="#CC000000">
+            <Label Foreground="Aquamarine" FontSize="18" Canvas.Left="275" Canvas.Top="10">Камень, Ножницы, Бумага</Label>
+            <Label x:Name="user_1" Foreground="White" FontSize="18" Canvas.Left="66" Canvas.Top="193" >Первый игрок</Label>
+            <Label x:Name="user_2" Foreground="White" FontSize="18" Canvas.Left="589" Canvas.Top="193">Второй игрок</Label>
+
+            <RadioButton x:Name="u1v1" GroupName="user1" Foreground="White" FontSize="14" Canvas.Left="73" Canvas.Top="240">Камень</RadioButton>
+            <RadioButton x:Name="u1v2" GroupName="user1" Foreground="White" FontSize="14" Canvas.Left="73" Canvas.Top="286">Ножницы</RadioButton>
+            <RadioButton x:Name="u1v3" GroupName="user1" Foreground="White" FontSize="14" Canvas.Left="73" Canvas.Top="263">Бумага</RadioButton>
+
+            <RadioButton x:Name="u2v1" GroupName="user2" Foreground="White" FontSize="14" Canvas.Left="589" Canvas.Top="240" HorizontalAlignment="Left" VerticalAlignment="Center">Камень</RadioButton>
+            <RadioButton x:Name="u2v2" GroupName="user2" Foreground="White" FontSize="14" Canvas.Left="592" Canvas.Top="290">Ножницы</RadioButton>
+            <RadioButton x:Name="u2v3" GroupName="user2" Foreground="White" FontSize="14" Canvas.Left="592" Canvas.Top="263">Бумага</RadioButton>
+
+            <Button Width="250" Height="30" Background="#FF9CB923" Foreground="White" Canvas.Left="275" Canvas.Top="354" Click="Game" >Играть</Button>
+
+            <Label x:Name="result" Foreground="AliceBlue" FontSize="36" Canvas.Left="202" Canvas.Top="130">Победил 1 игрок</Label>
+        </Canvas>
+    </Grid>
+</Window>
